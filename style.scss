@@ -205,7 +205,7 @@ input:checked + .slider {
 input:focus + .slider {
     background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
 }
-input:hover + .slider {
+input:hover + .slider:hover {
     background: #a2a7f0;
     transition: 0.4s;
 }
