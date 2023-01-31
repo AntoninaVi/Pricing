@@ -12,7 +12,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 150vh;
+    @media screen and(max-width:930px) {
+        height: 100%;
+        background-position: right;
+    }
 }
+
 .container {
     max-width: 1440px;
     width: 100%;
@@ -42,6 +47,9 @@ body {
         display: flex;
         align-items: center;
         margin-bottom: 4rem;
+        @media screen and(max-width:310px) {
+            margin-bottom: 0;
+        }
     }
     &__toggle-span {
         &:first-of-type {
@@ -55,6 +63,14 @@ body {
 
     &__cards {
         display: flex;
+        @media screen and(max-width:930px) {
+            flex-direction: column;
+            align-self: center;
+        }
+        @media screen and(max-width:310px) {
+            transform: scale(0.8);
+            margin-top: -7em;
+        }
     }
 
     &__card {
@@ -68,12 +84,20 @@ body {
         cursor: pointer;
         // height: 100%;
 
-        &:focus{
+        &:focus {
             color: #ffffff;
             background: linear-gradient(135deg, #a2a7f0 0.05%, #696edd 100.05%);
             box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
             transition: ease-in-out 0.3s;
             transform: scale(1.1);
+        }
+        @media screen and(max-width:930px) {
+            margin-bottom: 2em;
+        }
+        @media screen and(max-width:500px) {
+            &:focus {
+                transform: scale(1);
+            }
         }
     }
 
@@ -92,7 +116,7 @@ body {
         line-height: 71px;
         text-align: center;
         padding-bottom: 2rem;
-        border-bottom: 1px solid rgb(207, 209, 225)
+        border-bottom: 1px solid rgb(207, 209, 225);
     }
 
     &__card-option {
@@ -108,29 +132,38 @@ body {
     }
 
     &__card-button {
+        width: 100%;
+        max-width: 18em;
         font-weight: 700;
         font-style: normal;
         text-decoration: none;
         text-align: center;
-        padding: 14px 66px;
+        padding: 0.8em 4.1em;
         background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
         border-radius: 6px;
         color: #ffffff;
-        margin-top: 2em;
         text-transform: uppercase;
-        border: 1px solid #6D72DE;
-        &:hover{
+        white-space: nowrap;
+
+        &:hover {
             background: #ffffff;
             color: #6d72de;
+            outline: 1px solid #6d72de;
             transition: ease-in 0.3s;
         }
     }
+    @media screen and(max-width:400px) {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
 }
-.pricing__card:focus .pricing__card-button{
+.pricing__card:focus .pricing__card-button {
     background: #ffffff;
     color: #6d72de;
     transition: ease-in 0.3s;
 }
+
+// Switcher
 
 .switch {
     position: relative;
@@ -166,13 +199,16 @@ body {
     transition: 0.4s;
 }
 input:checked + .slider {
-    background-color: #2196f3;
+    background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
+    background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
 }
-
+input:hover + .slider {
+    background: #a2a7f0;
+    transition: 0.4s;
+}
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);

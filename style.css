@@ -16,6 +16,12 @@ body {
   background-size: cover;
   height: 150vh;
 }
+@media screen and (max-width: 930px) {
+  .wrapper {
+    height: 100%;
+    background-position: right;
+  }
+}
 
 .container {
   max-width: 1440px;
@@ -60,6 +66,11 @@ body {
           align-items: center;
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 310px) {
+  .pricing__toggle {
+    margin-bottom: 0;
+  }
+}
 .pricing__toggle-span:first-of-type {
   margin-right: 1.6em;
 }
@@ -70,6 +81,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 930px) {
+  .pricing__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+@media screen and (max-width: 310px) {
+  .pricing__cards {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-top: -7em;
+  }
 }
 .pricing__card {
   padding: 2em 2em;
@@ -91,6 +120,17 @@ body {
   transition: ease-in-out 0.3s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+@media screen and (max-width: 930px) {
+  .pricing__card {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .pricing__card:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 .pricing__card-name {
   font-style: normal;
@@ -120,23 +160,31 @@ body {
   margin-bottom: 3em;
 }
 .pricing__card-button {
+  width: 100%;
+  max-width: 18em;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
   text-align: center;
-  padding: 14px 66px;
+  padding: 0.8em 4.1em;
   background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
   border-radius: 6px;
   color: #ffffff;
-  margin-top: 2em;
   text-transform: uppercase;
-  border: 1px solid #6D72DE;
+  white-space: nowrap;
 }
 .pricing__card-button:hover {
   background: #ffffff;
   color: #6d72de;
+  outline: 1px solid #6d72de;
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
+}
+@media screen and (max-width: 400px) {
+  .pricing {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
 }
 
 .pricing__card:focus .pricing__card-button {
@@ -184,12 +232,17 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196f3;
-          box-shadow: 0 0 1px #2196f3;
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+}
+
+input:hover + .slider {
+  background: #a2a7f0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider:before {
