@@ -76,17 +76,17 @@ body {
   background: #ffffff;
   -webkit-box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
           box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+  border: none;
   border-radius: 10px;
   max-width: 21.8em;
   width: 100%;
-  height: 100%;
+  cursor: pointer;
 }
-.pricing__card:hover {
+.pricing__card:focus {
+  color: #ffffff;
   background: linear-gradient(135deg, #a2a7f0 0.05%, #696edd 100.05%);
   -webkit-box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
           box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
-  color: #ffffff;
-  cursor: pointer;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
   -webkit-transform: scale(1.1);
@@ -104,8 +104,9 @@ body {
   font-weight: 700;
   font-size: 72px;
   line-height: 71px;
-  margin-bottom: 2rem;
   text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(207, 209, 225);
 }
 .pricing__card-option {
   text-align: center;
@@ -113,15 +114,13 @@ body {
   font-size: 15px;
   line-height: 28px;
   padding: 1.3rem 0;
-  border-bottom: 1px solid rgb(110, 114, 142);
-}
-.pricing__card-option:first-of-type {
-  border-top: 1px solid rgb(110, 114, 142);
+  border-bottom: 1px solid rgb(207, 209, 225);
 }
 .pricing__card-option:last-of-type {
   margin-bottom: 3em;
 }
 .pricing__card-button {
+  font-weight: 700;
   font-style: normal;
   text-decoration: none;
   text-align: center;
@@ -131,11 +130,20 @@ body {
   color: #ffffff;
   margin-top: 2em;
   text-transform: uppercase;
+  border: 1px solid #6D72DE;
 }
-
-.pricing__card .pricing__card-button:hover {
+.pricing__card-button:hover {
   background: #ffffff;
   color: #6d72de;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.pricing__card:focus .pricing__card-button {
+  background: #ffffff;
+  color: #6d72de;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
 
 .switch {
