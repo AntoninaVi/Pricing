@@ -6,11 +6,17 @@
 body {
     font-family: "Montserrat", sans-serif;
     color: #6e728e;
+    @media screen and(min-width:1080px) {
+        overflow: hidden;
+    }
 }
+
 .wrapper {
-    background-image: url(img/bg.png);
+    background-image: url(img/bg.png) ;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: left 20% bottom 10% ;
+    background-attachment: fixed;
     height: 150vh;
     @media screen and(max-width:930px) {
         height: 100%;
@@ -124,7 +130,7 @@ body {
         font-weight: 700;
         font-size: 15px;
         line-height: 28px;
-        padding: 1.3rem 0;
+        padding: 0.7em 0;
         border-bottom: 1px solid rgb(207, 209, 225);
         &:last-of-type {
             margin-bottom: 3em;
