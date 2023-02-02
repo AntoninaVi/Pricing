@@ -19,14 +19,14 @@ body {
   background-image: url(img/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom 10%;
+  background-position: center bottom 30%;
   background-attachment: fixed;
   height: 150vh;
 }
 @media screen and (max-width: 930px) {
   .wrapper {
     height: 100%;
-    background-position: center;
+    background-position: right bottom 10%;
   }
 }
 
