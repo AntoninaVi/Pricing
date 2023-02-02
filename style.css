@@ -19,7 +19,7 @@ body {
   background-image: url(img/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 20% bottom 10%;
+  background-position: center bottom 10%;
   background-attachment: fixed;
   height: 150vh;
 }
