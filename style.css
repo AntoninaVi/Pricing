@@ -201,6 +201,32 @@ body {
   transition: ease-in 0.3s;
 }
 
+.pricing__card:nth-child(2) {
+  color: #ffffff;
+  background: linear-gradient(135deg, #a2a7f0 0.05%, #696edd 100.05%);
+  -webkit-box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+          box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+}
+@media screen and (min-width: 830px) {
+  .pricing__card:nth-child(2) {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.pricing__card:nth-child(2) .pricing__card-button {
+  background: #ffffff;
+  color: #6d72de;
+}
+
+.pricing__card:nth-child(2) .pricing__card-button:hover {
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  outline: 1px solid #ffffff;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .switch {
   position: relative;
   display: inline-block;
